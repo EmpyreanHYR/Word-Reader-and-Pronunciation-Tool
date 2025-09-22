@@ -1,2 +1,46 @@
-# Word-Reader-and-Pronunciation-Tool
-Word 单词阅读器与发音工具，是一个基于 Python 和 Tkinter 的桌面应用程序，旨在帮助用户阅读 Word 文档中的单词并实现单词发音。支持 macOS 系统自带发音和 pyttsx3 语音引擎，适合英语学习和单词记忆。
+# Word 单词阅读器与发音工具
+
+## 简介
+
+本项目是一个基于 Python 和 Tkinter 的桌面应用程序，旨在帮助用户阅读 Word 文档中的单词并实现单词发音。支持 macOS 系统自带发音和 pyttsx3 语音引擎，适合英语学习和单词记忆。
+
+## 主要功能
+- 打开并解析 Word（.docx）文档，自动识别单词及释义
+- 支持点击单词发音，或选中任意文本发音
+- 支持语速调节、语音切换（部分平台）
+- 统计文档中识别到的英文单词数量
+- 友好的图形界面，支持鼠标点击和高亮显示
+
+## 依赖环境
+- Python 3.x
+- tkinter（标准库自带）
+- pyttsx3
+- python-docx
+
+macOS 用户可直接使用系统 `say` 命令发音，其他平台自动切换为 pyttsx3。
+
+## 安装依赖
+```bash
+pip install pyttsx3 python-docx
+```
+
+## 使用方法
+1. 运行 `main.py`
+2. 点击“打开 Word 文件”选择你的单词文档（.docx）
+3. 单击蓝色下划线单词即可发音，或选中任意文本点击“发音选中单词”
+4. 可通过界面按钮调节语速
+
+## 文件说明
+- `main.py`：主程序，包含全部功能逻辑
+- `Word1.docx`、`Word2.docx` 等：可用于测试的单词文档
+
+## 注意事项
+- 推荐在 macOS 下使用，Windows/Linux 需确保 pyttsx3 可用
+- Word 文档建议每行一个单词，格式如：
+  ```
+  apple [ˈæpl] n. 苹果
+  ```
+- 复杂格式或非标准内容会自动兼容处理，但最佳体验请使用推荐格式
+
+## 许可证
+MIT License
